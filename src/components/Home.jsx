@@ -26,7 +26,7 @@ function Home() {
     useEffect(()=>{
         const fetchPost=async()=>{
             setLoading(true);
-            axios.get("http://localhost:3000/api/v1/post",{
+            axios.get("https://aigen-server.onrender.com/api/v1/post",{
                 headers:{
                     "Content-Type":"application/json"
                 }

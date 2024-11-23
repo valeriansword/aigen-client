@@ -29,7 +29,7 @@ function CreatePost() {
       if(form.prompt && form.photo){
         try{
           setLoading(true);
-          const response=await axios.post("http://localhost:3000/api/v1/post",form,{
+          const response=await axios.post("https://aigen-server.onrender.com/api/v1/post",form,{
             headers:{
               "Content-Type":"application/json"
             }
@@ -68,7 +68,7 @@ function CreatePost() {
         if(form.prompt){
           setGeneratingImage(true)
           const prompt=form.prompt;
-          axios.post("http://localhost:3000/api/v1/dalle",{prompt},
+          axios.post("https://aigen-server.onrender.com/api/v1/dalle",{prompt},
             {
               headers:{
                 "Content-type":"application/json",
